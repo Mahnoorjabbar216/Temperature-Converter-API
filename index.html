@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="stylesheet.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <title>temperature conversion api</title>
+    </head>
+    <body>
+        <header>
+            <h1><i class="fa-solid fa-temperature-half"></i> Temperature Converter</h1>
+            <p>Quickly convert between Fahrenheit and Celsius using our API-powered tool.</p>
+        </header>
+
+        <div id="conversion-container" class="buttons">
+            <div class="buttons">
+                <button onclick="showConverter('FtoC')"><i class="fa-solid fa-temperature-arrow-down"></i>Farhenheit to celsius</button>
+                <button onclick="showConverter('CtoF')"><i class="fa-solid fa-temperature-arrow-up"></i>Celsius to farhenheit</button>
+            </div>
+        </div>
+
+        <div id="converterCard" class="converter-card" style="display: none;">
+            <input type="number" id="tempInput" placeholder="enter the Temperature">
+            <button onclick="convertTemp()"><i class="fa-solid fa-rotate"></i>Convert</button>
+            <div id="resultDisplay"></div>
+        </div>
+
+
+        <!--spinner-->
+        <div id="loadingSpinner" class="spinner-overlay" style="display:none;">
+            <div class="spinner"></div>
+        </div>
+
+        <footer>
+            <p>Powered by Temperature Conversion API | &copy; 2025</p>
+        </footer>
+
+        <!-- Custom Modal -->
+        <div id="customModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
